@@ -1,7 +1,7 @@
 name: Main Workflow
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
 
@@ -15,7 +15,6 @@ jobs:
      uses: actions/setup-java@v3
      with:
           java-version: 17
-          distribution: 'zulu' # Alternative distribution options are available.
        
    - name: Step 3 - Build Maven Project
      run: mvn --batch-mode clean -DskipTests
