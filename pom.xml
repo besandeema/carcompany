@@ -85,18 +85,19 @@
 
 
     <build>
-        
-           <plugins>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
+        <pluginManagement>
+            <plugins>
+             
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                        </execution>
+                       <execution>
                         <id>generate-report</id>
                         <phase>verify</phase>
                         <goals>
@@ -104,10 +105,10 @@
                         </goals>
 
                     </execution>
-                </executions>
-            </plugin>
-        </plugins>
-        
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
 </project>
